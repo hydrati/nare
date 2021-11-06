@@ -2,7 +2,7 @@ import { try_match } from './utils'
 import { hans as table0, hans_hqf as table1 } from '@narejs/xdi8-dict'
 
 // For Browsers
-let ALLOW_JIEBA = typeof global?.process?.versions?.node === "string" || typeof global?.require === "function"
+let ALLOW_JIEBA = typeof globalThis?.process?.versions?.node === "string" || typeof globalThis?.require === "function"
 let source_cut: (text: string) => string[];
 if (ALLOW_JIEBA) {
   try {
