@@ -1,14 +1,17 @@
 {
     "name": "nare",
     "description": "`Xdi8 Aho` Translator",
-    "version": "0.1.1",
+    "version": "0.1.3",
     "repository": {
         "url": "https://github.com/hyroge/nare"
     },
     "exports": {
         ".": {
-            "import": "./dist/index.esm.js",
-            "require": "./dist/index.js",
+            "node": {
+                "import": "./dist/index.esm.js",
+                "require": "./dist/index.js",
+                "default": "./dist/index.js"
+            },
             "default": "./dist/index.js"
         }
     },
