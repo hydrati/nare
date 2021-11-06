@@ -12,6 +12,7 @@ export * as Morse from './translate_xdi8-morse'
 export * as Ulang from './translate_xdi8-ulang'
 export * as Pua from './translate_xdi8-pua'
 export * as Pinyin from './translate_xdi8-pinyin'
+export * as Zhuyin from './translate_xdi8-zhuyin'
 
 export * as North from './translate_xdi8-north-new'
 export * as NorthOld from './translate_xdi8-north-old'
