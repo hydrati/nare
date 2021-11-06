@@ -15,3 +15,7 @@ export * as Pinyin from './translate_xdi8-pinyin'
 
 export * as North from './translate_xdi8-north-new'
 export * as NorthOld from './translate_xdi8-north-old'
+
+import { copyright as _copyright } from '@narejs/xdi8-dict'
+
+export const copyright: Record<string, string> = _copyright
