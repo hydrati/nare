@@ -18,7 +18,8 @@ const BRACKETS = ['(', '[', '"', '\'', '\{']
 const SPECIAL_CH_PATTERN = /^\!|\"|\#|\$|\%|\&|\'|\(|\)|\*|\+|\,|\-|\.|\/|\:|\;|\<|\=|\>|\?|\@|\[|\\|\]|\^|\_|\`|\{|\¦|\}|\~|\､$/
 const SPECIAL_CH_PATTERN2 = /^\“|\”|\《|\》|\；|\：|\‘|\’|\【|\】|\？|\！|\…|\。|\，|\、|\·$/
 export function translateFrom(source: string, split = false, table = 0): string {
-  source = (split && ALLOW_JIEBA ? source_cut!(source).join(" ") : source.split("").join(" "))
+  split = split && ALLOW_JIEBA
+  source = (split ? source_cut!(source).join(" ") : source.split("").join(" "))
   const pattern = (table == 0 ? table0 : table1) as Record<string, string>
 
   for (let [f, t] of Object.entries(pattern)) {
@@ -32,6 +33,7 @@ export function translateFrom(source: string, split = false, table = 0): string 
   }
   if (!split) source = source.slice(1)
   source = source.replaceAll('\n ', '\n')
+  source = source.replaceAll(/\s+/g, ' ')
 
   for (const i of BRACKETS) source = source.replaceAll(i + " ", " " + i)
   return source
