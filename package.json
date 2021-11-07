@@ -1,7 +1,7 @@
 {
     "name": "nare",
     "description": "`Xdi8 Aho` Translator",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "repository": {
         "url": "https://github.com/hyroge/nare"
     },
