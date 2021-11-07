@@ -1,14 +1,16 @@
 export const ARROW = '⇧'
 
-export const SORT_MT_LEN = (a: string[], b: string[]): number => b[0].length - a[0].length
-export const SORT_LT_LEN = (a: string[], b: string[]): number => a[0].length - b[0].length
+export const SORT_MT_LEN_R = (a: string[], b: string[]): number => b[1].length - a[1].length
+export const SORT_LT_LEN_R = (a: string[], b: string[]): number => a[1].length - b[1].length
+export const SORT_MT_LEN_L = (a: string[], b: string[]): number => b[0].length - a[0].length
+export const SORT_LT_LEN_L = (a: string[], b: string[]): number => a[0].length - b[0].length
 
 export function replace_map(
   source: string, 
   map: Record<string, string>, 
   sort?: ((a: [string, string], b: [string, string]) => number)
 ): string {
-  for (const [f, t] of Object.entries(map).sort(sort ?? SORT_MT_LEN)) source = source.replaceAll(f, t)
+  for (const [f, t] of Object.entries(map).sort(sort ?? SORT_MT_LEN_R)) source = source.replaceAll(f, t)
   return source
 }
 
@@ -17,7 +19,10 @@ export function replace_map_reverse(
   map: Record<string, string>,
   sort?: ((a: [string, string], b: [string, string]) => number)
 ): string {
-  for (const [f, t] of Object.entries(map).sort(sort ?? SORT_MT_LEN)) source = source.replaceAll(t, f)
+  for (const [f, t] of Object.entries(map).sort(sort ?? SORT_MT_LEN_R)) {
+    // console.log(f, t);
+    source = source.replaceAll(t, f)
+  }
   return source
 }
 

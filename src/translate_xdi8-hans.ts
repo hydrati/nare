@@ -1,4 +1,4 @@
-import { try_match, replace_map_reverse } from './utils'
+import { try_match, replace_map_reverse, clean_all_ch } from './utils'
 import { hans as table0, hans_hqf as table1 } from '@narejs/xdi8-dict'
 import { lcut } from '@narejs/jieba'
 
@@ -31,13 +31,14 @@ export enum ReplaceMode {
   Longest = 1
 }
 
-export function translateTo(source: string, table = 0, mode: ReplaceMode = 1): string {
+export function translateTo(source: string, table = 0, mode: ReplaceMode = 1, with_space = false): string {
   if (mode == 1) {
     const pattern = table == 0 ? table0 : table1
-    return replace_map_reverse(source, pattern)
+    const r = replace_map_reverse(source, pattern)
+    return with_space ? r : r.split(' ').join('')
   } else {
     const pattern = Object.entries(table == 0 ? table0 : table1)
-    return try_match(source, v => {
+    const r = try_match(source, v => {
       if (SPECIAL_CH_PATTERN.test(v) || SPECIAL_CH_PATTERN2.test(v) || v.trim() == "") return v.trim()
       else {
         const r = pattern.filter(p => (p as any)[1]?.toString() === v)
@@ -45,5 +46,6 @@ export function translateTo(source: string, table = 0, mode: ReplaceMode = 1): s
         else return false
       }
     }).join("")
+    return with_space ? r : r.split(' ').join('')
   }
 }
