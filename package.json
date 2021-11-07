@@ -1,7 +1,7 @@
 {
     "name": "nare",
     "description": "`Xdi8 Aho` Translator",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "repository": {
         "url": "https://github.com/hyroge/nare"
     },
@@ -15,6 +15,7 @@
             "default": "./dist/index.js"
         }
     },
+    "types": "./dist/types/index.d.ts",
     "scripts": {
         "build": "rollup -c rollup.config.js && yarn copy-wasm",
         "copy-wasm": " copy .\\node_modules\\@narejs\\jieba\\nare_jieba_bg.wasm .\\dist"
