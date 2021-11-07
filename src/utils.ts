@@ -1,12 +1,23 @@
 export const ARROW = '⇧'
 
-export function replace_map(source: string, map: Record<string, string>): string {
-  for (const [f, t] of Object.entries(map).sort((a, b) => b[0].length - a[0].length)) source = source.replaceAll(f, t)
+export const SORT_MT_LEN = (a: string[], b: string[]): number => b[0].length - a[0].length
+export const SORT_LT_LEN = (a: string[], b: string[]): number => a[0].length - b[0].length
+
+export function replace_map(
+  source: string, 
+  map: Record<string, string>, 
+  sort?: ((a: [string, string], b: [string, string]) => number)
+): string {
+  for (const [f, t] of Object.entries(map).sort(sort ?? SORT_MT_LEN)) source = source.replaceAll(f, t)
   return source
 }
 
-export function replace_map_reverse(source: string, map: Record<string, string>): string {
-  for (const [f, t] of Object.entries(map).sort((a, b) => b[1].length - a[1].length)) source = source.replaceAll(t, f)
+export function replace_map_reverse(
+  source: string, 
+  map: Record<string, string>,
+  sort?: ((a: [string, string], b: [string, string]) => number)
+): string {
+  for (const [f, t] of Object.entries(map).sort(sort ?? SORT_MT_LEN)) source = source.replaceAll(t, f)
   return source
 }
 
