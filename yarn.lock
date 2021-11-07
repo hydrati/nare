@@ -23,10 +23,116 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
+"@napi-rs/triples@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.npmjs.org/@napi-rs/triples/-/triples-1.0.3.tgz#76d6d0c3f4d16013c61e45dfca5ff1e6c31ae53c"
+  integrity sha512-jDJTpta+P4p1NZTFVLHJ/TLFVYVcOqv6l8xwOeBKNPMgY/zDYH/YH7SJbvrr/h1RcS9GzbPcLKGzpuK9cV56UA==
+
+"@narejs/jieba@^0.1.7":
+  version "0.1.7"
+  resolved "https://registry.npmjs.org/@narejs/jieba/-/jieba-0.1.7.tgz#dbc2e3c57fa802b8708d2f64c43d1863ca64c26f"
+  integrity sha512-6Sftzw7JipwgoqBom0/ccQ7N9yzk1FLbOUhatOg9ALWXp6LTgkqETGXkwDRuiOXrieWEXzxGNrobrCcAHHc59A==
+  dependencies:
+    "@node-rs/jieba" "^1.4.1"
+
 "@narejs/xdi8-dict@latest":
   version "0.1.2"
   resolved "https://registry.npmjs.org/@narejs/xdi8-dict/-/xdi8-dict-0.1.2.tgz#203c8723a4a418e0a606a61a80784d3221e1e8ce"
   integrity sha512-boYXxu3rzBDyGggI4rBA8bY9mu4EXKuFI2R/vnS89UDmVa5WfeGHGe5HOVdDQqHyQKXT3h7L6oVeVk6XmZbMZQ==
+
+"@node-rs/helper@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.npmjs.org/@node-rs/helper/-/helper-1.2.1.tgz#e079b05f21ff4329d82c4e1f71c0290e4ecdc70c"
+  integrity sha512-R5wEmm8nbuQU0YGGmYVjEc0OHtYsuXdpRG+Ut/3wZ9XAvQWyThN08bTh2cBJgoZxHQUPtvRfeQuxcAgLuiBISg==
+  dependencies:
+    "@napi-rs/triples" "^1.0.3"
+
+"@node-rs/jieba-android-arm64@1.4.1":
+  version "1.4.1"
+  resolved "https://registry.npmjs.org/@node-rs/jieba-android-arm64/-/jieba-android-arm64-1.4.1.tgz#2659be136f8ab872e24e57d6876b805687813069"
+  integrity sha512-LXSQGWxD9fsCq7ON8pcFTVQDMLCstAZA7y6dAPhJPX1r/Vg/Q51NupHRtVkgQuNB2Dipy0skNd+8OPHFQ4zDew==
+
+"@node-rs/jieba-darwin-arm64@1.4.1":
+  version "1.4.1"
+  resolved "https://registry.npmjs.org/@node-rs/jieba-darwin-arm64/-/jieba-darwin-arm64-1.4.1.tgz#d109e8d9351e781f482ac2b6e84fff8aee7bb3a7"
+  integrity sha512-FWH3QxAXqeBkJOsiet6jZG4DIjxiRbnxb3y3o41SuTqZYlhxf9WQQtAaa6z6YJ6DOnhNu+lDBHyluf2pyrTM+g==
+
+"@node-rs/jieba-darwin-x64@1.4.1":
+  version "1.4.1"
+  resolved "https://registry.npmjs.org/@node-rs/jieba-darwin-x64/-/jieba-darwin-x64-1.4.1.tgz#aa3711477d6bdddbd59d5f9dc923d0e236a8fcdc"
+  integrity sha512-goCAr52m4bA1mBYGfVIoOddHOLGF30Yo0y34Nt58x0GA4eHmf6vuD2kqwJ7y2FVtwNKZbXnKi1r6npsGL7Jd9Q==
+
+"@node-rs/jieba-freebsd-x64@1.4.1":
+  version "1.4.1"
+  resolved "https://registry.npmjs.org/@node-rs/jieba-freebsd-x64/-/jieba-freebsd-x64-1.4.1.tgz#30f2f739ee2df75a22cd705b940413555f11c322"
+  integrity sha512-YCoLkYnmICN5annaRi9gktPp90If/7wdNbdN5W25uz9h6PKZm+u71px9yptK49U2B0FEJYzmLP5DHz1DVdbffg==
+
+"@node-rs/jieba-linux-arm-gnueabihf@1.4.1":
+  version "1.4.1"
+  resolved "https://registry.npmjs.org/@node-rs/jieba-linux-arm-gnueabihf/-/jieba-linux-arm-gnueabihf-1.4.1.tgz#dc68cd43e01b6a900bdf3893e66535fba0418494"
+  integrity sha512-vmAs4s27a76pRuRpAoBxwkPsNaTJeC7dwBGFFeBZwPQ1/onH94OLnnhSFZfo2CDWBtUeB+9A+JlRWXD8MxTyyQ==
+
+"@node-rs/jieba-linux-arm64-gnu@1.4.1":
+  version "1.4.1"
+  resolved "https://registry.npmjs.org/@node-rs/jieba-linux-arm64-gnu/-/jieba-linux-arm64-gnu-1.4.1.tgz#a295107d6f663f44498947fa959698a877aee05e"
+  integrity sha512-BSwZRfLVQNe6o2EXP2ZwzcM1UIRmcWjkmu67plht3TPnYiEE+oLjm/H0NbholOS82JY+6pKCGzXiidfeWhSNxA==
+
+"@node-rs/jieba-linux-arm64-musl@1.4.1":
+  version "1.4.1"
+  resolved "https://registry.npmjs.org/@node-rs/jieba-linux-arm64-musl/-/jieba-linux-arm64-musl-1.4.1.tgz#e2a141fb2781be370bb60dce669b0c1230b50525"
+  integrity sha512-1FiuyEfY7VryKrG05zAeoPT57stqbOQtMcNbrWxPKpDCNlbO6xqzhxDaGQg5/d6BuBuHQhV3Tq5LUlo6SV6kfg==
+
+"@node-rs/jieba-linux-x64-gnu@1.4.1":
+  version "1.4.1"
+  resolved "https://registry.npmjs.org/@node-rs/jieba-linux-x64-gnu/-/jieba-linux-x64-gnu-1.4.1.tgz#8e98d0ec28c732c0b85197ab7a7676384e355c09"
+  integrity sha512-P7nAM4DXYPxjGJ92jB4uP3w7fQvt3ICk+jEYXnFJ9QNC7jbiY3enmcayfSNHxJUDeSOE8R93q4EI7aGBgFUCUQ==
+
+"@node-rs/jieba-linux-x64-musl@1.4.1":
+  version "1.4.1"
+  resolved "https://registry.npmjs.org/@node-rs/jieba-linux-x64-musl/-/jieba-linux-x64-musl-1.4.1.tgz#0c445158bd615c788c47733ce91ea20ff3aabdfe"
+  integrity sha512-ZO+QMbG5BVIeP3TwoakFPptoKIf+q7Npjjsywc2AheWulwfDoOwhBihTXoH8HDcaM4yb9QzcGtJrnhCnOCWuHQ==
+
+"@node-rs/jieba-win32-arm64-msvc@1.4.1":
+  version "1.4.1"
+  resolved "https://registry.npmjs.org/@node-rs/jieba-win32-arm64-msvc/-/jieba-win32-arm64-msvc-1.4.1.tgz#1779ed41a9bd79cc3e8822194940ba5b6c40b3e7"
+  integrity sha512-0cpEfUtJd+h3b81U/9SiryLX+9XX+30PiFNqd1V8i4GRPxOodbSEsUE5yksyERvl7QoVbTrsaDZqVF7o+/Z2EQ==
+
+"@node-rs/jieba-win32-ia32-msvc@1.4.1":
+  version "1.4.1"
+  resolved "https://registry.npmjs.org/@node-rs/jieba-win32-ia32-msvc/-/jieba-win32-ia32-msvc-1.4.1.tgz#7d27adbecbfb6a82daefa4ef58a5dee18fb66792"
+  integrity sha512-T8MSVxhW5bZz2qitvdbxfsf3vFTCnSbF3OMko6nRefDCfJaa1FyPq+BrE/JOcY1FrjHWaBhFloZY9oMkEOGhOA==
+
+"@node-rs/jieba-win32-x64-msvc@1.4.1":
+  version "1.4.1"
+  resolved "https://registry.npmjs.org/@node-rs/jieba-win32-x64-msvc/-/jieba-win32-x64-msvc-1.4.1.tgz#32aac6ef65e15548f91914303ba467f591f80cd9"
+  integrity sha512-o/fbrcwVdwMiUDzIV/9p4AE2dHtKtlL0ABh8tCfrLOmpbWu7GIJlVCCi1w7MtNhpNlKfkc/2whepREfw45RRfg==
+
+"@node-rs/jieba@^1.4.1":
+  version "1.4.1"
+  resolved "https://registry.npmjs.org/@node-rs/jieba/-/jieba-1.4.1.tgz#2128d6c322fd20bac98b5b28a3345820b2a2735b"
+  integrity sha512-nYTv9QSGS56U3jDVIV8+bRemQdX0LRNZk06l04WQYDInbexcnrltRjJX/Vs5OzBMHpZuUgOTNhAIbyUV0gatlg==
+  dependencies:
+    "@node-rs/helper" "^1.2.1"
+  optionalDependencies:
+    "@node-rs/jieba-android-arm64" "1.4.1"
+    "@node-rs/jieba-darwin-arm64" "1.4.1"
+    "@node-rs/jieba-darwin-x64" "1.4.1"
+    "@node-rs/jieba-freebsd-x64" "1.4.1"
+    "@node-rs/jieba-linux-arm-gnueabihf" "1.4.1"
+    "@node-rs/jieba-linux-arm64-gnu" "1.4.1"
+    "@node-rs/jieba-linux-arm64-musl" "1.4.1"
+    "@node-rs/jieba-linux-x64-gnu" "1.4.1"
+    "@node-rs/jieba-linux-x64-musl" "1.4.1"
+    "@node-rs/jieba-win32-arm64-msvc" "1.4.1"
+    "@node-rs/jieba-win32-ia32-msvc" "1.4.1"
+    "@node-rs/jieba-win32-x64-msvc" "1.4.1"
+
+"@rollup/plugin-alias@^3.1.8":
+  version "3.1.8"
+  resolved "https://registry.npmjs.org/@rollup/plugin-alias/-/plugin-alias-3.1.8.tgz#645fd84659e08d3d1b059408fcdf69c1dd435a6b"
+  integrity sha512-tf7HeSs/06wO2LPqKNY3Ckbvy0JRe7Jyn98bXnt/gfrxbe+AJucoNJlsEVi9sdgbQtXemjbakCpO/76JVgnHpA==
+  dependencies:
+    slash "^3.0.0"
 
 "@rollup/plugin-commonjs@^21.0.1":
   version "21.0.1"
@@ -67,6 +173,11 @@
   dependencies:
     "@rollup/pluginutils" "^3.1.0"
     resolve "^1.17.0"
+
+"@rollup/plugin-wasm@^5.1.2":
+  version "5.1.2"
+  resolved "https://registry.npmjs.org/@rollup/plugin-wasm/-/plugin-wasm-5.1.2.tgz#5ebd767a14eb7cc98f45aee817e3efbe15c944d8"
+  integrity sha512-eiOuMHBNY0EGTq3LCebg4IQ6/SOvKjmGetzqKajJWcbDQkrQZvHihZKKnBJYY7NuuvjNqCLdEViYr5aAZms63g==
 
 "@rollup/pluginutils@^3.0.8", "@rollup/pluginutils@^3.1.0":
   version "3.1.0"
@@ -359,6 +470,11 @@ serialize-javascript@^4.0.0:
   integrity sha512-GaNA54380uFefWghODBWEGisLZFj00nS5ACs6yHa9nLqlLpVLO8ChDGeKRjZnV4Nh4n0Qi7nhYZD/9fCPzEqkw==
   dependencies:
     randombytes "^2.1.0"
+
+slash@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
+  integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
 source-map-support@~0.5.20:
   version "0.5.20"

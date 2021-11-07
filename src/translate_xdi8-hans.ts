@@ -1,25 +1,12 @@
 import { try_match } from './utils'
 import { hans as table0, hans_hqf as table1 } from '@narejs/xdi8-dict'
-
-// For Browsers
-let ALLOW_JIEBA = typeof globalThis?.process?.versions?.node === "string" || typeof globalThis?.require === "function"
-let source_cut: (text: string) => string[];
-if (ALLOW_JIEBA) {
-  try {
-    const { cut } = require('@node-rs/jieba')
-    if (typeof cut !== "function") throw new Error()
-    else source_cut = cut
-  } catch {
-    ALLOW_JIEBA = !ALLOW_JIEBA
-  }
-}
+import { lcut } from '@narejs/jieba'
 
 const BRACKETS = ['(', '[', '"', '\'', '\{']
 const SPECIAL_CH_PATTERN = /^\!|\"|\#|\$|\%|\&|\'|\(|\)|\*|\+|\,|\-|\.|\/|\:|\;|\<|\=|\>|\?|\@|\[|\\|\]|\^|\_|\`|\{|\¦|\}|\~|\､$/
 const SPECIAL_CH_PATTERN2 = /^\“|\”|\《|\》|\；|\：|\‘|\’|\【|\】|\？|\！|\…|\。|\，|\、|\·$/
-export function translateFrom(source: string, split = false, table = 0): string {
-  split = split && ALLOW_JIEBA
-  source = (split ? source_cut!(source).join(" ") : source.split("").join(" "))
+export function translateFrom(source: string, split = false, table = 0, hmm = false): string {
+  source = (split ? lcut(source, hmm).join(" ") : source.split("").join(" "))
   const pattern = (table == 0 ? table0 : table1) as Record<string, string>
 
   for (let [f, t] of Object.entries(pattern)) {
