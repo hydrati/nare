@@ -35,7 +35,7 @@ export function translateTo(source: string, table = 0, mode: ReplaceMode = 1, wi
   if (mode == 1) {
     const pattern = table == 0 ? table0 : table1
     const r = replace_map_reverse(source, pattern)
-    return with_space ? r : r.split(' ').join('')
+    return with_space ? r : clean_all_ch(r, /\s/g)
   } else {
     const pattern = Object.entries(table == 0 ? table0 : table1)
     const r = try_match(source, v => {
@@ -46,6 +46,6 @@ export function translateTo(source: string, table = 0, mode: ReplaceMode = 1, wi
         else return false
       }
     }).join("")
-    return with_space ? r : r.split(' ').join('')
+    return with_space ? r : clean_all_ch(r, /\s/g)
   }
 }
